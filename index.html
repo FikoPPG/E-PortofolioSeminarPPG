@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  
+  <!-- Primary Meta Tags -->
+  <title>FIKO KURNIA PUTRA — Calon Pendidik Seni | Kreativitas, Budaya, dan Inovasi Pembelajaran</title>
+  <meta name="title" content="FIKO KURNIA PUTRA — Calon Pendidik Seni | Kreativitas, Budaya, dan Inovasi Pembelajaran" />
+  <meta name="description" content="E-Portfolio Fiko Kurnia Putra: Calon Pendidik Seni (PPG Prajabatan Pendidikan Seni Budaya UNNES & Karawitan ISI Surakarta). Menghidupkan seni dalam pembelajaran, menumbuhkan potensi dalam setiap murid." />
+  <meta name="author" content="Fiko Kurnia Putra" />
+  <meta name="theme-color" content="#191919" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://fikokurniaputra.local/" />
+  <meta property="og:title" content="FIKO KURNIA PUTRA — Calon Pendidik Seni" />
+  <meta property="og:description" content="Menghidupkan seni dalam pembelajaran, menumbuhkan potensi dalam setiap murid." />
+  <meta property="og:image" content="assets/images/fiko-portrait.jpg" />
+
+  <!-- Google Fonts: Space Grotesk (Display), Plus Jakarta Sans (Body), JetBrains Mono (Archive Details) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/sections.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <!-- Skip link for keyboard accessibility -->
+  <a href="#main-content" class="sr-only" style="position: absolute; top: 10px; left: 10px; z-index: 99999; padding: 10px; background: #D7FF64; color: #191919; border: 2px solid #191919;">
+    Lewati ke Konten Utama
+  </a>
+
+  <!-- ==========================================================================
+       LIVELY OPENING SCREEN (SPLASH / INTRO ANIMATION)
+       ========================================================================== -->
+  <div id="opening-screen" class="opening-screen" role="dialog" aria-modal="true" aria-label="Selamat Datang" onclick="dismissOpeningScreen()">
+    <div class="opening-particles" aria-hidden="true"></div>
+    
+    <div class="opening-card" onclick="dismissOpeningScreen()">
+      <div class="opening-avatar-wrap">
+        <img src="Fiko--.jpeg" alt="Fiko Kurnia Putra, S.Sn." class="opening-avatar-img" />
+        <span class="opening-sticker sticker-top-left">🎭 SENI TEATER</span>
+        <span class="opening-sticker sticker-top-right">🎵 KARAWITAN</span>
+        <span class="opening-sticker sticker-bottom">✦ PPG UNNES ✦</span>
+      </div>
+
+      <h1 class="opening-title">
+        FIKO KURNIA PUTRA, <span class="highlight">S.Sn.</span>
+      </h1>
+      <p class="opening-sub">// PENDIDIKAN SENI BUDAYA • PPG PRAJABATAN</p>
+
+      <div class="opening-loader-bar" aria-hidden="true">
+        <div class="opening-loader-fill"></div>
+      </div>
+
+      <span class="opening-status-text" id="opening-status-text">
+        ✨ Menyelaraskan Seni & Inovasi Pembelajaran...
+      </span>
+
+      <button type="button" id="opening-enter-btn" class="opening-skip-btn" onclick="dismissOpeningScreen()">
+        <span>Masuk ke E-Portofolio</span>
+        <span>→</span>
+      </button>
+      <div style="font-family: var(--font-mono); font-size: 11px; font-weight: 700; color: #191919; margin-top: 10px; padding: 4px 10px; background: rgba(215, 255, 100, 0.95); border: 1.5px solid #191919; border-radius: 4px; display: inline-flex; align-items: center; gap: 6px;">
+        <span>&#127925;</span>
+        <span>Musik Latar: J.S. Bach (Auto-Play Aktif)</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function dismissOpeningScreen() {
+      if (window.__bgMusic && typeof window.__bgMusic.ensurePlay === 'function') {
+        window.__bgMusic.ensurePlay();
+      }
+      var s = document.getElementById('opening-screen');
+      if (s && !s.classList.contains('is-hidden')) {
+        s.classList.add('is-hidden');
+        setTimeout(function() {
+          s.style.display = 'none';
+        }, 500);
+      }
+    }
+    // Auto dismiss after 2 seconds
+    setTimeout(dismissOpeningScreen, 2000);
+  </script>
+
+  <!-- ==========================================================================
+       NAVIGATION BAR
+       ========================================================================== -->
+  <header class="navbar" role="banner">
+    <div class="container nav-container">
+      <!-- Personal Brand Wordmark -->
+      <a href="#hero" class="brand-link" aria-label="FIKO KURNIA PUTRA Beranda">
+        <img src="Fiko--.jpeg" alt="Fiko Kurnia Putra" class="brand-avatar" />
+        <div class="brand-name">
+          <span>FIKO KURNIA PUTRA</span>
+          <span class="sub">CALON PENDIDIK SENI // 2026</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" role="navigation" aria-label="Navigasi Utama">
+        <a href="#hero" class="nav-link">Beranda</a>
+        <a href="#profil" class="nav-link">Profil</a>
+        <a href="#refleksi-mk" class="nav-link">Refleksi Mata Kuliah</a>
+        <a href="#refleksi-ppg" class="nav-link">Refleksi PPG</a>
+        <a href="#karya-inovasi" class="nav-link">Karya Inovasi</a>
+        <a href="#contact" class="nav-link">Kontak</a>
+      </nav>
+
+      <!-- Nav Actions (Theme Toggle & Mobile Trigger) -->
+      <div class="nav-actions">
+        <!-- Background Music Controller (BACH.mp3) -->
+        <button id="music-toggle" class="btn-music-toggle is-playing" aria-label="Putar / Jeda Musik Latar" title="Putar / Jeda Musik (BACH.mp3)">
+          <span id="music-toggle-icon" class="music-toggle-icon">
+            <svg class="icon-volume-playing" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+              <path class="wave-1" d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              <path class="wave-2" d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+            </svg>
+          </span>
+        </button>
+
+        <button class="mobile-toggle" aria-label="Buka Menu Navigasi" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menu Mobile">
+    <ul class="mobile-nav-list">
+      <li>
+        <a href="#hero" class="mobile-nav-link">
+          <span>Beranda</span>
+          <span class="mono-index">00</span>
+        </a>
+      </li>
+      <li>
+        <a href="#profil" class="mobile-nav-link">
+          <span>Profil</span>
+          <span class="mono-index">01</span>
+        </a>
+      </li>
+      <li>
+        <a href="#refleksi-mk" class="mobile-nav-link">
+          <span>Refleksi Mata Kuliah</span>
+          <span class="mono-index">02</span>
+        </a>
+      </li>
+      <li>
+        <a href="#refleksi-ppg" class="mobile-nav-link">
+          <span>Refleksi PPG</span>
+          <span class="mono-index">03</span>
+        </a>
+      </li>
+      <li>
+        <a href="#karya-inovasi" class="mobile-nav-link">
+          <span>Karya Inovasi</span>
+          <span class="mono-index">04</span>
+        </a>
+      </li>
+      <li>
+        <a href="#contact" class="mobile-nav-link">
+          <span>Kontak</span>
+          <span class="mono-index">05</span>
+        </a>
+      </li>
+    </ul>
+
+    <div style="margin-top: 24px; padding-top: 16px; border-top: var(--border-thin); display: flex; align-items: center; justify-content: space-between;">
+      <span style="font-family: var(--font-mono); font-size: var(--text-xs); color: var(--ink-muted);">MODE TEMA:</span>
+      <button class="btn-theme-toggle mobile-theme-btn" aria-label="Ganti Tema Terang/Gelap" title="Ganti Tema">
+        <span class="theme-toggle-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </span>
+      </button>
+    </div>
+    <div style="margin-top: 12px; font-family: var(--font-mono); font-size: var(--text-xs); color: var(--ink-muted);">
+      FIKO // PERSONAL E-PORTFOLIO 2026
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN CONTENT WRAPPER
+       ========================================================================== -->
+  
+  <!-- Background Music Audio Player (BACH.mp3) -->
+  <audio id="bg-music" src="BACH.mp3" autoplay preload="auto" loop playsinline></audio>
+<main id="main-content">
+    
+    <!-- 1. HERO / BERANDA UTAMA (HOME & PRIMARY NAVIGATION PORTAL) -->
+    <section id="hero" class="hero-section hero-home-portal" aria-label="Beranda Utama E-Portofolio">
+      <!-- Background Photo Collage Layer (Foto-foto Fiko) -->
+      <div class="hero-bg-collage" id="hero-bg-collage" aria-hidden="true">
+        <div class="bg-photo-item photo-1" style="--rot: -5deg; --x: -2%; --y: 4%;"><img src="Fiko.jpeg" alt="Fiko" loading="lazy" /></div>
+        <div class="bg-photo-item photo-2" style="--rot: 6deg; --x: 18%; --y: -4%;"><img src="Fiko-.jpeg" alt="Fiko" loading="lazy" /></div>
+        <div class="bg-photo-item photo-3" style="--rot: -7deg; --x: 40%; --y: 6%;"><img src="Fiko--.jpeg" alt="Fiko" loading="lazy" /></div>
+        <div class="bg-photo-item photo-4" style="--rot: 5deg; --x: 64%; --y: -2%;"><img src="Fiko---.jpeg" alt="Fiko" loading="lazy" /></div>
+        <div class="bg-photo-item photo-5" style="--rot: -6deg; --x: 84%; --y: 8%;"><img src="Fiko-----.jpeg" alt="Fiko" loading="lazy" /></div>
+        <div class="bg-photo-item photo-6" style="--rot: 7deg; --x: 3%; --y: 56%;"><img src="Fiko------.jpeg" alt="Fiko" loading="lazy" /></div>
+        <div class="bg-photo-item photo-7" style="--rot: -5deg; --x: 34%; --y: 60%;"><img src="Fiko-------.jpeg" alt="Fiko" loading="lazy" /></div>
+        <div class="bg-photo-item photo-8" style="--rot: 4deg; --x: 74%; --y: 54%;"><img src="Fiko----- (2).jpeg" alt="Fiko" loading="lazy" /></div>
+        <div class="hero-bg-overlay"></div>
+      </div>
+
+      <!-- Interactive Lucu Kalcer Floating Elements (Bisa bergerak lucu kalcer saat kursor lewat) -->
+      <div class="kalcer-interactive-layer" id="kalcer-interactive-layer" aria-hidden="true">
+        <div class="kalcer-sticker sticker-1" data-speed="1.4" title="Seni Tradisi">
+          <span class="sticker-inner">✦ SENI TRADISI & KARAWITAN</span>
+        </div>
+        <div class="kalcer-sticker sticker-2" data-speed="-1.8" title="Pendidik Reflektif">
+          <span class="sticker-inner">🎭 PENDIDIK REFLEKTIF</span>
+        </div>
+        <div class="kalcer-sticker sticker-4" data-speed="-1.5" title="Ruang Ekspresi">
+          <span class="sticker-inner">( ᵔ ᵕ ᵔ ) RUANG INOVASI</span>
+        </div>
+        <div class="kalcer-sticker sticker-5" data-speed="1.2" title="UNNES x ISI">
+          <span class="sticker-inner">★ UNNES × ISI SURAKARTA</span>
+        </div>
+        <div class="kalcer-sticker sticker-6" data-speed="-1.6" title="Kreativitas">
+          <span class="sticker-inner">🎵 BUDAYA & KREATIVITAS</span>
+        </div>
+      </div>
+
+      <!-- Foreground Layer: Main Branding, Navigation Deck & Layer Atas Photo (Fiko----.jpeg) -->
+      <div class="container hero-home-container">
+        <div class="hero-home-main-col">
+          <!-- Main Title & Name -->
+          <div class="hero-home-header">
+            <div class="home-badge-row">
+              <span class="badge-editorial lime kalcer-wiggle-badge">★ BERANDA UTAMA</span>
+              <span class="badge-editorial cobalt">PENDIDIKAN SENI BUDAYA // 2026</span>
+            </div>
+            
+            <h1 class="home-display-title">
+              E-PORTOFOLIO
+            </h1>
+
+            <div class="home-name-plate">
+              <span class="name-sparkle">✦</span>
+              <h2 class="home-person-name">Fiko Kurnia Putra, S.Sn.</h2>
+              <span class="name-sparkle">✦</span>
+            </div>
+          </div>
+
+          <!-- Navigation Deck (Halaman Utama / Navigasi Cepat) -->
+          <div class="home-nav-deck">
+            <div class="home-nav-deck-label">
+              <span>NAVIGASI SUB-BAB PORTOFOLIO</span>
+              <span class="pulse-indicator"></span>
+            </div>
+
+            <div class="home-nav-grid">
+              <a href="#profil" class="home-nav-card card-profil">
+                <div class="nav-card-top">
+                  <span class="nav-num">01</span>
+                  <span class="nav-arrow">↗</span>
+                </div>
+                <div class="nav-card-content">
+                  <h3 class="nav-title">Profil</h3>
+                  <span class="nav-sub">Identitas, Visi & Filosofi Pendidik</span>
+                </div>
+              </a>
+
+              <a href="#refleksi-mk" class="home-nav-card card-mk">
+                <div class="nav-card-top">
+                  <span class="nav-num">02</span>
+                  <span class="nav-arrow">↗</span>
+                </div>
+                <div class="nav-card-content">
+                  <h3 class="nav-title">Refleksi Mata Kuliah</h3>
+                  <span class="nav-sub">11 MK PPG & Kerangka Kritis 4C</span>
+                </div>
+              </a>
+
+              <a href="#refleksi-ppg" class="home-nav-card card-ppg">
+                <div class="nav-card-top">
+                  <span class="nav-num">03</span>
+                  <span class="nav-arrow">↗</span>
+                </div>
+                <div class="nav-card-content">
+                  <h3 class="nav-title">Refleksi PPG</h3>
+                  <span class="nav-sub">Paradigma Baru, Praktik PPL & RTL</span>
+                </div>
+              </a>
+
+              <a href="#karya-inovasi" class="home-nav-card card-inovasi">
+                <div class="nav-card-top">
+                  <span class="nav-num">04</span>
+                  <span class="nav-arrow">↗</span>
+                </div>
+                <div class="nav-card-content">
+                  <h3 class="nav-title">Karya Inovasi</h3>
+                  <span class="nav-sub">Media, Modul, LKPD & Asesmen Teater</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Foreground Photo Card (Layer Atas: Fiko----.jpeg) -->
+        <div class="hero-home-photo-col">
+          <div class="foreground-photo-card" id="foreground-fiko-card">
+            <div class="photo-tape-top">
+              <span class="tape-text">✦ PENDIDIK SENI ✦</span>
+            </div>
+            
+            <div class="photo-frame-inner">
+              <img src="Fiko----.jpeg" alt="Fiko Kurnia Putra, S.Sn." class="foreground-photo-img" id="foreground-photo-img" />
+              <div class="photo-corner-tag">S.Sn.</div>
+            </div>
+
+            <div class="foreground-photo-caption">
+              <div class="caption-indicator">
+                <span class="indicator-dot"></span>
+                <span class="indicator-label">FOTO RESMI</span>
+              </div>
+              <h3 class="caption-name">Fiko Kurnia Putra, S.Sn.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKER MARQUEE BANNER -->
+    <div class="ticker-wrap" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-item">Learning Experience Design</span>
+        <span class="ticker-item">Understanding by Design (UbD)</span>
+        <span class="ticker-item">Contextual LKPD</span>
+        <span class="ticker-item">Authentic Assessment</span>
+        <span class="ticker-item">Interactive EdTech</span>
+        <span class="ticker-item">Differentiated Learning</span>
+        <span class="ticker-item">Classroom Action Research</span>
+        <!-- Repeat for seamless scroll -->
+        <span class="ticker-item">Learning Experience Design</span>
+        <span class="ticker-item">Understanding by Design (UbD)</span>
+        <span class="ticker-item">Contextual LKPD</span>
+        <span class="ticker-item">Authentic Assessment</span>
+        <span class="ticker-item">Interactive EdTech</span>
+        <span class="ticker-item">Differentiated Learning</span>
+        <span class="ticker-item">Classroom Action Research</span>
+      </div>
+    </div>
+
+    <!-- INSTITUTIONAL & ACCREDITATION PARTNER LOGOS RIBBON -->
+    <div class="academic-logos-strip" aria-label="Afiliasi dan Mitra Institusi">
+      <div class="container">
+        <div class="academic-logos-label">
+          <span>✦ PENDIDIKAN PROFESI GURU • KEMENDIKBUDRISTEK • UNIVERSITAS NEGERI SEMARANG • SEKOLAH RAMAH ANAK ✦</span>
+        </div>
+        <div class="academic-logos-row">
+          <div class="academic-logo-item logo-dark-box" title="Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi">
+            <img src="tut-wuri-handayani-logo-with-white-text-png-b461.png" alt="Tut Wuri Handayani - Kemendikbudristek" loading="lazy" />
+          </div>
+          <div class="academic-logo-item" title="PPG Calon Guru">
+            <img src="Logo PPG Calon Guru.png" alt="Logo PPG Calon Guru" loading="lazy" />
+          </div>
+          <div class="academic-logo-item" title="Universitas Negeri Semarang">
+            <img src="logo-unnes-horizontal.png" alt="Universitas Negeri Semarang (UNNES)" loading="lazy" />
+          </div>
+          <div class="academic-logo-item" title="Penjaminan Mutu Pendidikan">
+            <img src="LOGO-BERMUTU.png" alt="Logo Bermutu" loading="lazy" />
+          </div>
+          <div class="academic-logo-item" title="Sekolah Ramah Anak">
+            <img src="ramah.png" alt="Sekolah Ramah Anak" loading="lazy" />
+          </div>
+          <div class="academic-logo-item" title="Lambang Universitas Negeri Semarang">
+            <img src="logo.png" alt="UNNES Emblem" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+         SUB BAB 1: PROFIL (IDENTITAS DIRI, PRINSIP, PERJALANAN, FILOSOFI & KOMPETENSI)
+         ========================================================================== -->
+    <section id="profil" class="section" aria-label="Profil dan Identitas">
+      <!-- Ambient Background Photo Accents (Foto Fiko) -->
+      <div class="section-bg-accent" style="--rot: -5deg; top: 12%; left: 1%;" title="Fiko Kurnia Putra"><img src="Fiko-.jpeg" alt="Fiko Kurnia Putra" loading="lazy" /></div>
+      <div class="section-bg-accent" style="--rot: 6deg; bottom: 8%; right: 1%;" title="Fiko Kurnia Putra"><img src="Fiko---.jpeg" alt="Fiko Kurnia Putra" loading="lazy" /></div>
+
+      <div class="container">
+        <!-- Section Header -->
+        <header class="section-header">
+          <div class="section-index">01. Profil & Identitas Pendidik</div>
+          <h2 class="section-title">FIKO KURNIA PUTRA</h2>
+          <p class="section-subtitle">
+            Calon Pendidik Seni Budaya | Kreativitas, Budaya, dan Inovasi Pembelajaran
+          </p>
+        </header>
+
+        <!-- Motto Editorial Callout Banner -->
+        <div class="motto-banner">
+          <p class="motto-text">“Menghidupkan seni dalam pembelajaran, menumbuhkan potensi dalam setiap murid.”</p>
+          <span class="motto-author-tag">// FIKO KURNIA PUTRA, S.Sn.</span>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left Column: Tentang Saya Narrative & Quick Identity Badges -->
+          <div class="about-narrative">
+            <div style="margin-bottom: 8px;">
+              <span class="badge-editorial cobalt">TENTANG SAYA</span>
+              <h3 style="font-size: var(--text-2xl); margin-top: 8px; margin-bottom: 16px;">
+                Membangun Kepekaan & Karakter Lewat Seni
+              </h3>
+            </div>
+
+            <p class="about-lead">
+              Perkenalkan, saya <strong>Fiko Kurnia Putra</strong>, seorang calon pendidik seni yang berasal dari Kediri, Jawa Timur, dengan latar belakang akademik di bidang Seni Karawitan. Perjalanan pendidikan dan pengalaman praktik mengajar telah membentuk pandangan saya bahwa seni bukan sekadar ruang untuk mempelajari teknik dan menghasilkan karya, melainkan juga sarana untuk menumbuhkan kepekaan, kreativitas, karakter, dan kemampuan menghargai keberagaman.
+            </p>
+            <p>
+              Saat ini, saya sedang menempuh <strong>Pendidikan Profesi Guru (PPG) Prajabatan di Universitas Negeri Semarang</strong>, Program Studi Pendidikan Seni Budaya. Melalui proses ini, saya terus mengembangkan kompetensi pedagogis, profesional, sosial, dan kepribadian untuk mempersiapkan diri menjadi pendidik yang reflektif, adaptif, dan mampu memberikan kontribusi nyata bagi pendidikan.
+            </p>
+            <p>
+              Bagi saya, menjadi guru bukan hanya tentang menyampaikan pengetahuan, tetapi juga tentang memahami kebutuhan murid, menemukan potensi dalam setiap individu, dan menciptakan pengalaman belajar yang bermakna.
+            </p>
+
+            <!-- Profil Identity Highlights Badges -->
+            <div class="profile-identity-chips">
+              <div class="identity-chip">
+                <span class="chip-icon">🎓</span>
+                <div>
+                  <strong>S1 Seni Karawitan</strong>
+                  <span>ISI Surakarta (2020–2025)</span>
+                </div>
+              </div>
+              <div class="identity-chip">
+                <span class="chip-icon">🏛️</span>
+                <div>
+                  <strong>PPG Prajabatan</strong>
+                  <span>Pendidikan Seni Budaya — UNNES</span>
+                </div>
+              </div>
+              <div class="identity-chip">
+                <span class="chip-icon">🎭</span>
+                <div>
+                  <strong>Praktik Mengajar</strong>
+                  <span>PPL SMAN 4 Semarang (Kelas X)</span>
+                </div>
+              </div>
+              <div class="identity-chip">
+                <span class="chip-icon">📍</span>
+                <div>
+                  <strong>Domisili</strong>
+                  <span>Kediri & Semarang, Indonesia</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Portrait & Visi/Komitmen Cards -->
+          <div class="principles-column">
+            <!-- Dedicated Profil Portrait Card -->
+            <div class="profile-portrait-card">
+              <div class="profile-portrait-badge">
+                <span class="badge-editorial lime">✦ FIKO KURNIA PUTRA, S.Sn.</span>
+              </div>
+              <img src="Fiko.jpeg" alt="Fiko Kurnia Putra" class="profile-portrait-img" />
+              <div class="profile-portrait-caption">
+                <span>Calon Pendidik Seni • Budaya, Tradisi & Inovasi Pembelajaran</span>
+              </div>
+            </div>
+
+            <div class="vision-commitment-box" style="margin-top: 20px;">
+              <!-- Visi Pendidik Card -->
+              <div class="vision-card">
+                <div class="vision-card-header">
+                  <span class="badge-editorial cobalt">VISI PENDIDIK</span>
+                  <h4>Visi Saya sebagai Pendidik</h4>
+                </div>
+                <p>
+                  Saya bercita-cita menjadi guru profesional yang inspiratif, kreatif, dan inklusif dalam menciptakan pembelajaran yang menyenangkan serta mendorong murid berpikir kritis, berkarakter, dan berani meraih cita-cita.
+                </p>
+                <p style="margin-top: 10px; font-size: var(--text-xs); color: var(--ink-muted); line-height: 1.5;">
+                  Saya meyakini bahwa setiap murid memiliki potensi, minat, karakter, dan cara belajar yang berbeda. Karena itu, pendidikan harus memberikan kesempatan yang adil bagi setiap murid untuk berkembang, berekspresi, membangun kepercayaan diri, dan menemukan makna dalam proses belajarnya.
+                </p>
+              </div>
+
+              <!-- Komitmen Card -->
+              <div class="commitment-card">
+                <span class="label-tag">KOMITMEN SAYA</span>
+                <p>
+                  Menjadi pendidik berarti bersedia terus bertumbuh, mendengarkan, dan memberikan ruang bagi orang lain untuk berkembang. Saya berkomitmen untuk menghadirkan pendidikan seni yang kreatif, bermakna, inklusif, dan berakar pada nilai-nilai budaya.
+                </p>
+                <div class="commitment-highlight">
+                  “Bagi saya, keberhasilan seorang guru bukan hanya terlihat dari apa yang berhasil diajarkan, tetapi juga dari potensi yang berhasil dibangkitkan dalam diri setiap murid.”
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Filosofi Mengajar Quote & Pillars -->
+        <div style="margin-top: 64px;">
+          <div style="margin-bottom: 24px;">
+            <span class="badge-editorial cobalt">LANDASAN FILOSOFIS</span>
+            <h3 style="font-size: var(--text-2xl); margin-top: 8px;">Filosofi Mengajar</h3>
+            <p style="color: var(--ink-muted); font-size: var(--text-sm);">
+              Saya memandang guru sebagai fasilitator yang membantu murid membangun pemahaman, mengeksplorasi kreativitas, dan belajar dari proses maupun kesalahan. Dalam pembelajaran seni, saya ingin menghadirkan pengalaman yang tidak hanya mengasah keterampilan musikal dan apresiasi budaya, tetapi juga menumbuhkan empati, kemandirian, keberanian, serta kemampuan bekerja sama.
+            </p>
+          </div>
+
+          <div class="philosophy-quote-box">
+            <div class="quote-mark">“</div>
+            <blockquote class="quote-text" id="philosophy-quote-text">
+              “Setiap murid memiliki potensi untuk berkembang ketika diberikan kesempatan, pendampingan, dan ruang belajar yang tepat.”
+            </blockquote>
+            <cite class="quote-author" id="philosophy-quote-author">
+              — Fiko Kurnia Putra, S.Sn.
+            </cite>
+          </div>
+
+          <div class="philosophy-pillars-grid" id="philosophy-pillars">
+            <div class="pillar-card">
+              <div class="pillar-icon-box">🌱</div>
+              <h4 class="pillar-title">Guru Sebagai Fasilitator</h4>
+              <p class="pillar-desc">Membantu murid membangun pemahaman sendiri, mengeksplorasi kreativitas, dan belajar dari proses maupun kegagalan secara aman.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon-box">🎵</div>
+              <h4 class="pillar-title">Keterampilan Musikal & Budaya</h4>
+              <p class="pillar-desc">Menghadirkan pengalaman seni yang mengasah keterampilan musikal, ekspresi drama, serta kecintaan mendalam pada budaya bangsa.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon-box">🤝</div>
+              <h4 class="pillar-title">Empati, Keberanian & Kerja Sama</h4>
+              <p class="pillar-desc">Melalui proses berkesenian bersama, murid dilatih berempati, mandiri, berani berbicara di muka umum, dan harmonis bekerja sama.</p>
+            </div>
+            <div class="pillar-card">
+              <div class="pillar-icon-box">🔄</div>
+              <h4 class="pillar-title">Guru Pembelajar Sepanjang Hayat</h4>
+              <p class="pillar-desc">Guru harus terus belajar melalui refleksi berkala, evaluasi kelas, dan keterbukaan mengadopsi inovasi teknologi pembelajaran.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SUB BAB 2: REFLEKSI MATA KULIAH PPG (11 MATA KULIAH + KERANGKA 4C & ARTEFAK)
+         ========================================================================== -->
+    <section id="refleksi-mk" class="section section-alt" aria-label="Refleksi Mata Kuliah PPG">
+      <!-- Ambient Background Photo Accents (Foto Fiko) -->
+      <div class="section-bg-accent" style="--rot: 4deg; top: 8%; left: 1.5%;" title="Fiko Kurnia Putra"><img src="Fiko--.jpeg" alt="Fiko Kurnia Putra" loading="lazy" /></div>
+      <div class="section-bg-accent" style="--rot: -6deg; bottom: 8%; right: 1.5%;" title="Fiko Kurnia Putra"><img src="Fiko-----.jpeg" alt="Fiko Kurnia Putra" loading="lazy" /></div>
+
+      <div class="container">
+        <header class="section-header">
+          <div class="section-index">02. Refleksi Mata Kuliah</div>
+          <h2 class="section-title">Refleksi Kritis Mata Kuliah PPG</h2>
+          <p class="section-subtitle">
+            Refleksi mendalam pada 14 mata kuliah Semester 1 & Semester 2, praktik lapangan (PPL), dan pilihan dengan kerangka 4C (Connection, Challenge, Concept, Change) serta kurasi artefak pembelajaran autentik.
+          </p>
+        </header>
+
+        <!-- Course Category Filter Tabs & Expand/Collapse All Toolbar -->
+        <div class="courses-view-toolbar" style="margin-bottom: 28px;">
+          <div class="filter-pills" role="tablist" aria-label="Filter Kategori Mata Kuliah">
+            <button class="filter-btn course-filter-btn active" data-filter="all">Semua Mata Kuliah (14)</button>
+            <button class="filter-btn course-filter-btn" data-filter="sem1">Semester 1 (6 MK)</button>
+            <button class="filter-btn course-filter-btn" data-filter="sem2">Semester 2 (8 MK)</button>
+            <button class="filter-btn course-filter-btn" data-filter="practice">Praktik Lapangan (PPL)</button>
+          </div>
+
+          <div class="courses-toggle-group">
+            <button type="button" id="btn-expand-all-courses" class="btn-toggle-all" title="Jabarkan seluruh sajian refleksi mata kuliah">
+              <span>⤢ Jabarkan Semua</span>
+            </button>
+            <button type="button" id="btn-collapse-all-courses" class="btn-toggle-all" title="Ringkas kembali seluruh sajian mata kuliah">
+              <span>⤡ Ringkas Semua</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Dynamic Courses Grid (Populated & Animated via courses.js) -->
+        <div class="courses-grid" id="courses-grid">
+          <!-- MK-S1-01 -->
+          <article class="course-card is-expanded" data-id="mk-s1-01" data-category="sem1">
+            <div class="course-card-header">
+              <div class="course-badges">
+                <span class="badge-editorial lime">Semester 1 // Inti</span>
+                <span class="course-meta-tag">Semester 1 // 3 SKS</span>
+              </div>
+              <span class="course-code">MK-S1-01</span>
+            </div>
+            <h3 class="course-title">1. Pemahaman tentang Peserta Didik dan Pembelajaran</h3>
+            <div class="course-summary-wrap">
+              <p class="course-summary">Dari mata kuliah ini saya belajar bahwa tidak ada dua murid yang persis sama. Karakter, kemampuan, minat, kebutuhan, dan cara belajar mereka berbeda-beda. Sebagai calon guru Seni Budaya yang berlatar belakang Seni Karawitan, saya merasa pelajaran seni butuh ruang yang lapang untuk berekspresi, berkreasi, bekerja sama, dan menumbuhkan percaya diri. Saat mengajar Dasar Teater di kelas X SMAN 4 Semarang, saya baru benar-benar sadar bahwa guru perlu mengenali murid dulu sebelum memilih strategi. Murid yang pasif ternyata tidak selalu tidak paham. Bisa jadi ia hanya perlu waktu berpikir, ditemani, atau berada di suasana belajar yang lebih nyaman. Pengalaman itu membuat saya lebih berhati-hati sebelum menilai seorang murid dari seberapa sering ia bersuara, dan lebih ingin mengamati mereka dari dekat.</p>
+            </div>
+            <div class="course-card-actions">
+              <button type="button" class="btn-card-toggle" aria-expanded="true">
+                <span class="toggle-text">Ringkas Refleksi</span>
+                <span class="toggle-icon">â†‘</span>
+              </button>
+            </div>
+          </article>
+          <!-- MK-S1-02 -->
+          <article class="course-card is-expanded" data-id="mk-s1-02" data-category="sem1">
+            <div class="course-card-header">
+              <div class="course-badges">
+                <span class="badge-editorial lime">Semester 1 // Inti</span>
+                <span class="course-meta-tag">Semester 1 // 2 SKS</span>
+              </div>
+              <span class="course-code">MK-S1-02</span>
+            </div>
+            <h3 class="course-title">2. Filosofi Pendidikan dan Pendidikan Nilai</h3>
+            <div class="course-summary-wrap">
+              <p class="course-summary">Mata kuliah ini mengubah cara saya memandang pendidikan. Bagi saya sekarang, mengajar tidak sebatas memindahkan pengetahuan, tetapi juga menemani murid tumbuh menjadi pribadi yang berkarakter. Saya belajar tentang kodrat alam, kodrat zaman, dan semboyan Tut Wuri Handayani, dan semuanya terasa dekat dengan peran seorang guru. Di pelajaran Seni Budaya, nilai seperti gotong royong, tanggung jawab, kreativitas, dan menghargai perbedaan bisa tumbuh lewat diskusi, kerja kelompok, dan praktik seni. Saya juga makin sadar bahwa murid lebih sering meniru daripada sekadar mendengar, sehingga sikap guru sehari-hari ikut menjadi pelajaran. Tugas saya adalah memberi arahan sekaligus ruang agar tiap murid berkembang sesuai potensinya.</p>
+            </div>
+            <div class="course-card-actions">
+              <button type="button" class="btn-card-toggle" aria-expanded="true">
+                <span class="toggle-text">Ringkas Refleksi</span>
+                <span class="toggle-icon">â†‘</span>
+              </button>
+            </div>
+          </article>
+          <!-- MK-S1-03 -->
+          <article class="course-card is-expanded" data-id="mk-s1-03" data-category="sem1">
+            <div class="course-card-header">
+              <div class="course-badges">
+                <span class="badge-editorial lime">Semester 1 // Inti</span>
+                <span class="course-meta-tag">Semester 1 // 3 SKS</span>
+              </div>
+              <span class="course-code">MK-S1-03</span>
+            </div>
+            <h3 class="course-title">3. Pembelajaran Mendalam dan Asesmen (PMA) Dasar</h3>
+            <div class="course-summary-wrap">
+              <p class="course-summary">Lewat mata kuliah ini saya memahami bahwa pembelajaran yang bermakna tidak cukup diukur dari materi yang selesai atau nilai yang bagus. Murid perlu mengamati, menjelajah, berdiskusi, berlatih, dan memikirkan kembali apa yang telah mereka alami. Dalam Dasar Teater, unsur teater dan dramaturgi jadi lebih mudah dipahami ketika murid menghubungkannya dengan pertunjukan yang benar-benar mereka lihat. Saya juga belajar melihat asesmen sebagai bagian dari proses belajar, bukan sekadar penutup. Asesmen bisa menunjukkan sejauh mana pemahaman murid berkembang dan langkah apa yang perlu saya ambil selanjutnya. Cara pandang ini membuat saya ingin lebih sering bertanya pada diri sendiri, apakah murid benar-benar mengerti atau hanya hafal.</p>
+            </div>
+            <div class="course-card-actions">
+              <button type="button" class="btn-card-toggle" aria-expanded="true">
+                <span class="toggle-text">Ringkas Refleksi</span>
+                <span class="toggle-icon">â†‘</span>
+              </button>
+            </div>
+          </article>
+          <!-- MK-S1-04 -->
+          <article class="course-card is-expanded" data-id="mk-s1-04" data-category="sem1">
+            <div class="course-card-header">
+              <div class="course-badges">
+                <span class="badge-editorial lime">Semester 1 // Pilihan</span>
+                <span class="course-meta-tag">Semester 1 // 2 SKS</span>
+              </div>
+              <span class="course-code">MK-S1-04</span>
+            </div>
+            <h3 class="course-title">4. Pendidikan Berkelanjutan Berbasis Teknologi dan Konservasi</h3>
+            <div class="course-summary-wrap">
+              <p class="course-summary">Mata kuliah ini mengajarkan bahwa teknologi bisa membuat pembelajaran lebih menarik dan mudah dipahami, asalkan dipakai sesuai kebutuhan murid. Di Seni Budaya, saya bisa menghadirkan video pertunjukan, ilustrasi, presentasi, dan sumber belajar lain yang memperkaya pengalaman mereka. Sebagai calon guru berlatar Seni Karawitan, saya juga memandang pelestarian budaya sebagai bagian dari pendidikan. Saya ingin teknologi menjadi jembatan yang mendekatkan murid pada seni dan budaya, bukan pengganti pengalaman berlatih langsung. Nilai dan penghargaan pada tradisi harus tetap terasa, meski medianya berubah. Dengan begitu murid tidak hanya melihat seni di layar, tetapi juga mau mengenal, mencoba, dan menjaganya.</p>
+            </div>
+            <div class="course-card-actions">
+              <button type="button" class="btn-card-toggle" aria-expanded="true">
+                <span class="toggle-text">Ringkas Refleksi</span>
+                <span class="toggle-icon">â†‘</span>
+              </button>
+            </div>
+          </article>
+          <!-- MK-S1-05 -->
+          <article class="course-card is-expanded" data-id="mk-s1-05" data-category="sem1">
+            <div class="course-card-header">
+              <div class="course-badges">
+                <span class="badge-editorial lime">Semester 1 // Inti</span>
+                <span class="course-meta-tag">Semester 1 // 2 SKS</span>
+              </div>
+              <span class="course-code">MK-S1-05</span>
+            </div>
+            <h3 class="course-title">5. Pola Pikir Bertumbuh (Growth Mindset) dalam Pembelajaran</h3>
+            <div class="course-summary-wrap">
+              <p class="course-summary">Di mata kuliah ini saya belajar bahwa kemampuan murid bisa tumbuh lewat latihan, pendampingan, kesempatan, dan umpan balik yang tepat. Karena itu saya tidak boleh cepat memberi cap 'tidak mampu' hanya karena seorang murid belum berhasil pada percobaan pertama. Dalam pelajaran seni, ada murid yang cepat menangkap materi, ada pula yang butuh waktu lebih lama untuk membangun keterampilan atau keberanian. Hal ini mengingatkan saya untuk menghargai proses, mendorong murid berani mencoba, dan membantu mereka melihat kesalahan sebagai bagian dari belajar. Saya juga ingin menerapkannya pada diri sendiri, yaitu terbuka pada kritik dan mau terus memperbaiki cara mengajar. Saya sadar semangat saja tidak cukup, murid tetap butuh strategi dan latihan yang jelas.</p>
+            </div>
+            <div class="course-card-actions">
+              <button type="button" class="btn-card-toggle" aria-expanded="true">
+                <span class="toggle-text">Ringkas Refleksi</span>
+                <span class="toggle-icon">â†‘</span>
+              </button>
+            </div>
+          </article>
+          <!-- MK-S1-06 -->
+          <article class="course-card is-expanded" data-id="mk-s1-06" data-category="sem1 practice">
+            <div class="course-card-header">
+              <div class="course-badges">
+                <span class="badge-editorial lime">Semester 1 // Praktik Lapangan</span>
+                <span class="course-meta-tag">Semester 1 // 6 SKS</span>
+              </div>
+              <span class="course-code">MK-S1-06</span>
+            </div>
+            <h3 class="course-title">6. Praktik Pengalaman Lapangan (PPL) Terbimbing di SMAN 4 Semarang</h3>
+            <div class="course-summary-wrap">
+              <p class="course-summary">PPL Terbimbing adalah pertama kalinya saya mempertemukan teori kuliah dengan kelas yang sebenarnya. Saya belajar menyusun perangkat pembelajaran, menyampaikan Dasar Teater kepada murid kelas X, mengelola kelas, membangun komunikasi, dan mengevaluasi apa yang sudah saya lakukan. Dari situ saya sadar bahwa menguasai materi memang penting, tetapi belum menjamin pembelajaran berhasil. Guru juga perlu membaca suasana kelas, memilih metode yang cocok, dan memberi murid kesempatan untuk ikut terlibat. Ada kalanya rencana yang sudah saya siapkan tidak berjalan semulus bayangan, dan dari situlah saya banyak belajar. Pengalaman ini menjadi bekal saya menghadapi PPL Mandiri dengan lebih siap.</p>
+            </div>
+            <div class="course-card-actions">
+              <button type="button" class="btn-card-toggle" aria-expanded="true">
+                <span class="toggle-text">Ringkas Refleksi</span>
+                <span class="toggle-icon">â†‘</span>
+              </button>
+            </div>
+          </article>
+          <!-- MK-S2-07 -->
+          <article class="course-card is-expanded" data-id="mk-s2-07" data-category="sem2">
+            <div class="course-card-header">
+              <div class="course-badges">
+                <span class="badge-editorial cobalt">Semester 2 // Inti</span>
+                <span class="course-meta-tag">Semester 2 // 3 SKS</span>
+              </div>
+              <span class="course-code">MK-S2-07</span>
+            </div>
+            <h3 class="course-title">1. Pembelajaran Mendalam dan Asesmen Lanjut</h3>
+            <div class="course-summary-wrap">
+              <p class="course-summary">Di semester kedua, pemahaman saya tentang pembelajaran mendalam dan asesmen jadi lebih matang. Saya belajar bahwa tujuan, kegiatan, dan asesmen harus saling selaras supaya murid tidak sekadar mengingat informasi, tetapi memahami, menghubungkan, dan memakainya dalam konteks yang bermakna. Di Dasar Teater, saya mengajak murid menganalisis unsur pertunjukan lewat tayangan audiovisual, diskusi, dan pertanyaan pemantik. Dari situ saya melihat bahwa asesmen punya fungsi lebih dari sekadar memberi nilai. Asesmen juga membantu saya menemukan bagian yang masih sulit bagi murid, lalu memperbaiki cara saya mengajar. Saya jadi lebih terbiasa melihat hasil murid sebagai petunjuk, bukan vonis.</p>
+            </div>
+            <div class="course-card-actions">
+              <button type="button" class="btn-card-toggle" aria-expanded="true">
+                <span class="toggle-text">Ringkas Refleksi</span>
+                <span class="toggle-icon">â†‘</span>
+              </button>
+            </div>
+          </article>
+          <!-- MK-S2-08 -->
+          <article class="course-card is-expanded" data-id="mk-s2-08" data-category="sem2">
+            <div class="course-card-header">
+              <div class="course-badges">
+                <span class="badge-editorial cobalt">Semester 2 // Inti</span>
+                <span class="course-meta-tag">Semester 2 // 2 SKS</span>
+              </div>
+              <span class="course-code">MK-S2-08</span>
+            </div>
+            <h3 class="course-title">2. Pendidikan Inklusif</h3>
+            <div class="course-summary-wrap">
+              <p class="course-summary">Pendidikan Inklusif memperkuat keyakinan saya bahwa setiap murid berhak mendapat kesempatan belajar yang adil sesuai kebutuhan dan potensinya. Adil bukan berarti semua diperlakukan sama, melainkan setiap murid mendapat dukungan yang pas agar bisa mencapai tujuan belajar. Di pelajaran seni, ada murid yang berani tampil dan berbicara, sementara yang lain lebih nyaman mengamati, menulis, atau berlatih dulu. Saya belajar bahwa guru bisa menyediakan beberapa jalan untuk berpartisipasi tanpa menghilangkan kompetensi inti yang harus dicapai. Saya ingin murid merasa dihargai dan aman di kelas, sebab dari rasa aman itulah mereka berani berkembang. Tantangan saya ke depan adalah menemukan bentuk dukungan yang tepat untuk tiap murid.</p>
+            </div>
+            <div class="course-card-actions">
+              <button type="button" class="btn-card-toggle" aria-expanded="true">
+                <span class="toggle-text">Ringkas Refleksi</span>
+                <span class="toggle-icon">â†‘</span>
+              </button>
+            </div>
+          </article>
+          <!-- MK-S2-09 -->
+          <article class="course-card is-expanded" data-id="mk-s2-09" data-category="sem2">
+            <div class="course-card-header">
+              <div class="course-badges">
+                <span class="badge-editorial cobalt">Semester 2 // Inti</span>
+                <span class="course-meta-tag">Semester 2 // 2 SKS</span>
+              </div>
+              <span class="course-code">MK-S2-09</span>
+            </div>
+            <h3 class="course-title">3. Pembelajaran Sosial dan Emosional</h3>
+            <div class="course-summary-wrap">
+              <p class="course-summary">Dari Pembelajaran Sosial dan Emosional, saya memahami bahwa kesiapan belajar murid tidak hanya ditentukan kemampuan akademik. Kemampuan mengenali emosi, mengelola diri, memahami orang lain, membangun hubungan, dan mengambil keputusan yang bertanggung jawab juga berperan besar. Selama PPL, saya melihat murid membutuhkan suasana kelas yang aman agar berani menyampaikan pikiran dan tidak takut salah. Diskusi berpasangan dalam TPS bisa menjadi tempat melatih komunikasi, kerja sama, sikap saling menghargai, dan tanggung jawab. Tetapi saya juga sadar bahwa murid yang makin aktif belum tentu berarti kompetensi sosial emosionalnya ikut berkembang. Untuk menilainya, saya perlu pengamatan dan instrumen yang memang dirancang untuk itu.</p>
+            </div>
+            <div class="course-card-actions">
+              <button type="button" class="btn-card-toggle" aria-expanded="true">
+                <span class="toggle-text">Ringkas Refleksi</span>
+                <span class="toggle-icon">â†‘</span>
+              </button>
+            </div>
+          </article>
+          <!-- MK-S2-10 -->
+          <article class="course-card is-expanded" data-id="mk-s2-10" data-category="sem2">
+            <div class="course-card-header">
+              <div class="course-badges">
+                <span class="badge-editorial cobalt">Semester 2 // Inti</span>
+                <span class="course-meta-tag">Semester 2 // 2 SKS</span>
+              </div>
+              <span class="course-code">MK-S2-10</span>
+            </div>
+            <h3 class="course-title">4. Literasi dalam Lintas Mata Pelajaran</h3>
+            <div class="course-summary-wrap">
+              <p class="course-summary">Mata kuliah ini membuat saya melihat literasi lebih luas dari sekadar membaca dan menulis. Literasi juga berarti memahami informasi, menafsirkan sumber, membandingkan gagasan, dan menyampaikan pikiran secara kritis. Di Seni Budaya, hal itu bisa dilatih lewat membaca sejarah teater, mengenali jenis pertunjukan, memahami naskah, lalu menganalisis unsur dan maknanya. Murid kemudian dapat menyampaikan pemahamannya lewat tulisan atau diskusi. Saya belajar bahwa literasi bisa berjalan bersama pembelajaran seni tanpa menghilangkan pengalaman artistik yang menjadi inti mata pelajaran ini. Yang perlu saya jaga adalah porsinya, supaya murid tetap punya banyak waktu untuk berpraktik.</p>
+            </div>
+            <div class="course-card-actions">
+              <button type="button" class="btn-card-toggle" aria-expanded="true">
+                <span class="toggle-text">Ringkas Refleksi</span>
+                <span class="toggle-icon">â†‘</span>
+              </button>
+            </div>
+          </article>
+          <!-- MK-S2-11 -->
+          <article class="course-card is-expanded" data-id="mk-s2-11" data-category="sem2">
+            <div class="course-card-header">
+              <div class="course-badges">
+                <span class="badge-editorial cobalt">Semester 2 // Pilihan</span>
+                <span class="course-meta-tag">Semester 2 // 2 SKS</span>
+              </div>
+              <span class="course-code">MK-S2-11</span>
+            </div>
+            <h3 class="course-title">5. Literasi Kesehatan Mental</h3>
+            <div class="course-summary-wrap">
+              <p class="course-summary">Mata kuliah ini menyadarkan saya bahwa lingkungan belajar ikut menentukan kesejahteraan psikologis murid. Perubahan perilaku, rasa kurang percaya diri, tekanan belajar, atau kesulitan bergaul perlu disikapi dengan peduli dan hati-hati. Sebagai calon guru, saya ingin berkomunikasi dengan empati, menjaga privasi murid, dan tidak menempelkan label atau diagnosis tanpa dasar yang tepat. Saya juga belajar bahwa peran guru ada batasnya. Kalau murid memerlukan dukungan yang lebih khusus, guru perlu mengikuti prosedur sekolah dan berkoordinasi dengan pihak yang berwenang. Mengetahui batas ini justru membuat saya lebih tenang, karena saya tahu kapan harus mendampingi dan kapan harus meminta bantuan.</p>
+            </div>
+            <div class="course-card-actions">
+              <button type="button" class="btn-card-toggle" aria-expanded="true">
+                <span class="toggle-text">Ringkas Refleksi</span>
+                <span class="toggle-icon">â†‘</span>
+              </button>
+            </div>
+          </article>
+          <!-- MK-S2-12 -->
+          <article class="course-card is-expanded" data-id="mk-s2-12" data-category="sem2">
+            <div class="course-card-header">
+              <div class="course-badges">
+                <span class="badge-editorial cobalt">Semester 2 // Kolaborasi</span>
+                <span class="course-meta-tag">Semester 2 // 2 SKS</span>
+              </div>
+              <span class="course-code">MK-S2-12</span>
+            </div>
+            <h3 class="course-title">6. Projek Kepemimpinan</h3>
+            <div class="course-summary-wrap">
+              <p class="course-summary">Lewat Projek Kepemimpinan, saya belajar bahwa memimpin tidak selalu berarti menjadi yang paling menonjol. Memimpin juga berarti menjalankan tanggung jawab, berkoordinasi, bekerja sama, dan membantu kelompok mencapai tujuannya. Dalam kelompok, saya kebagian dokumentasi dan pengelolaan media sosial. Tugas itu melatih saya mengatur informasi, merekam proses kegiatan, dan berkomunikasi dengan anggota lain. Saya belajar bahwa projek berjalan baik kalau pembagian tugasnya jelas, koordinasi dimulai sejak awal, dan setiap anggota sadar bahwa perannya, sekecil apa pun, berarti bagi hasil bersama. Saya pikir kebiasaan ini akan berguna ketika nanti bekerja bersama rekan guru.</p>
+            </div>
+            <div class="course-card-actions">
+              <button type="button" class="btn-card-toggle" aria-expanded="true">
+                <span class="toggle-text">Ringkas Refleksi</span>
+                <span class="toggle-icon">â†‘</span>
+              </button>
+            </div>
+          </article>
+          <!-- MK-S2-13 -->
+          <article class="course-card is-expanded" data-id="mk-s2-13" data-category="sem2">
+            <div class="course-card-header">
+              <div class="course-badges">
+                <span class="badge-editorial cobalt">Semester 2 // Inti Penutup</span>
+                <span class="course-meta-tag">Semester 2 // 2 SKS</span>
+              </div>
+              <span class="course-code">MK-S2-13</span>
+            </div>
+            <h3 class="course-title">7. Seminar Pendidikan Profesi Guru</h3>
+            <div class="course-summary-wrap">
+              <p class="course-summary">Seminar Pendidikan Profesi Guru memberi saya kesempatan menengok kembali perkembangan diri dan menghubungkan perkuliahan dengan praktik di sekolah. Saya makin paham bahwa profesionalisme guru terlihat dari tanggung jawab, etika, kemampuan berkolaborasi, dan kesediaan menerima masukan, selain dari penguasaan materi. Menyusun dan menyajikan portofolio melatih saya mengumpulkan bukti pembelajaran, menjelaskan proses refleksi, dan menyampaikan alasan di balik keputusan mengajar yang saya ambil. Dari sini saya belajar bahwa refleksi tidak boleh berhenti sebagai tulisan. Refleksi perlu berubah menjadi rencana pengembangan diri yang benar-benar saya jalani.</p>
+            </div>
+            <div class="course-card-actions">
+              <button type="button" class="btn-card-toggle" aria-expanded="true">
+                <span class="toggle-text">Ringkas Refleksi</span>
+                <span class="toggle-icon">â†‘</span>
+              </button>
+            </div>
+          </article>
+          <!-- MK-S2-14 -->
+          <article class="course-card is-expanded" data-id="mk-s2-14" data-category="sem2 practice">
+            <div class="course-card-header">
+              <div class="course-badges">
+                <span class="badge-editorial cobalt">Semester 2 // Praktik Mandiri</span>
+                <span class="course-meta-tag">Semester 2 // 8 SKS</span>
+              </div>
+              <span class="course-code">MK-S2-14</span>
+            </div>
+            <h3 class="course-title">8. PPL Mandiri di SMAN 4 Semarang</h3>
+            <div class="course-summary-wrap">
+              <p class="course-summary">PPL Mandiri memberi saya peran yang lebih besar: merancang, melaksanakan, mengamati, lalu memperbaiki pembelajaran sendiri. Di kelas X-2 SMAN 4 Semarang, pada materi Dasar Teater, saya mendapati bahwa pembelajaran yang didominasi ceramah dan tanya jawab klasikal belum bisa melibatkan seluruh murid. Karena itu saya mencoba model kooperatif Think Pair Share (TPS) dengan bantuan media audiovisual. Murid menonton video pertunjukan, berpikir sendiri, berdiskusi dengan pasangan, lalu menyampaikan hasilnya kepada kelas. Ini pertama kalinya saya mengangkat masalah yang saya lihat sendiri di kelas, lalu mencoba menjawabnya dengan tindakan nyata.
+
+Pada Siklus I, masih ada murid yang belum tuntas, beberapa pasangan belum berdiskusi dengan baik, dan pertanyaan di LKPD perlu dibuat lebih analitis. Maka di Siklus II saya memakai contoh visual yang lebih konkret, menyusun pertanyaan yang lebih terarah, menata ulang pasangan secara heterogen, mengatur waktu, dan memperkuat umpan balik dari guru. Perbaikan itu lahir dari apa yang saya lihat di kelas, bukan dari tebakan.
+
+Dalam PTK yang saya susun, rata-rata nilai kelas naik dari 70,60 pada prasiklus menjadi 84,29 di Siklus I dan 94,60 di Siklus II. Ketuntasan belajar meningkat dari 40% menjadi 94,29%, lalu 100%. Keaktifan klasikal dalam kategori Aktif dan Sangat Aktif juga naik dari 14,29% menjadi 82,86%, kemudian 100%. Angka-angka ini menunjukkan perkembangan yang baik di kelas yang saya teliti. Meski begitu, saya sadar hasil ini harus dibaca sesuai konteks penelitiannya, dan belum tentu sama bila diterapkan di kelas lain.</p>
+            </div>
+            <div class="course-card-actions">
+              <button type="button" class="btn-card-toggle" aria-expanded="true">
+                <span class="toggle-text">Ringkas Refleksi</span>
+                <span class="toggle-icon">â†‘</span>
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SUB BAB 3: REFLEKSI PPG (PERJALANAN TRANSFORMATIF, PPL, & RTL GURU)
+         ========================================================================== -->
+    <section id="refleksi-ppg" class="section" aria-label="Refleksi Pengalaman Belajar PPG">
+      <!-- Ambient Background Photo Accents (Foto Fiko) -->
+      <div class="section-bg-accent" style="--rot: -5deg; top: 12%; left: 1.5%;" title="Fiko Kurnia Putra"><img src="Fiko------.jpeg" alt="Fiko Kurnia Putra" loading="lazy" /></div>
+      <div class="section-bg-accent" style="--rot: 5deg; bottom: 10%; right: 1.5%;" title="Fiko Kurnia Putra"><img src="Fiko-------.jpeg" alt="Fiko Kurnia Putra" loading="lazy" /></div>
+      <div class="section-bg-accent" style="--rot: 3deg; top: 52%; right: 1.2%;" title="Fiko Kurnia Putra"><img src="Fiko-.jpeg" alt="Fiko Kurnia Putra" loading="lazy" /></div>
+
+      <div class="container">
+        <header class="section-header">
+          <div class="section-index">03. Refleksi PPG</div>
+          <h2 class="section-title">Perjalanan Transformatif Calon Guru Profesional</h2>
+          <p class="section-subtitle">
+            Dokumentasi utuh atas rekonstruksi paradigma mengajar, pembelajaran berharga saat menghadapi dinamika nyata di sekolah mitra (PPL SMAN 4 Semarang), evaluasi diri, serta peta jalan rencana tindak lanjut (RTL).
+          </p>
+        </header>
+
+        <!-- 1. Pergeseran Paradigma Mengajar (Sebelum vs Sesudah) -->
+        <div style="margin-bottom: 56px;">
+          <div style="margin-bottom: 24px;">
+            <span class="badge-editorial lime">PARADIGMA PENDIDIK</span>
+            <h3 style="font-size: var(--text-2xl); margin-top: 8px;">Pergeseran Pola Pikir: Sebelum vs Sesudah PPG</h3>
+            <p style="color: var(--ink-muted); font-size: var(--text-sm);">
+              Perbandingan konkret evolusi mindset mengajar dari metode konvensional menuju paradigma baru yang berpihak seutuhnya pada peserta didik.
+            </p>
+          </div>
+
+          <div class="paradigm-shift-grid" id="paradigm-shift-grid">
+            <div class="paradigm-card">
+              <div class="paradigm-card-header">
+                <span class="paradigm-aspect">Fokus & Orientasi Mengajar</span>
+                <span class="badge-editorial lime">PARADIGMA UTAMA</span>
+              </div>
+              <div class="paradigm-comparison">
+                <div class="paradigm-col before">
+                  <span class="paradigm-col-label">Sebelum PPG</span>
+                  <p>Berorientasi pada ketuntasan materi kurikulum dan buku teks semata, memandang guru sebagai satu-satunya pusat informasi di depan kelas.</p>
+                </div>
+                <div class="paradigm-col after">
+                  <span class="paradigm-col-label">Sesudah PPG (Paradigma Baru)</span>
+                  <p>Berpusat sepenuhnya pada peserta didik (Student-Centered). Guru bertindak sebagai fasilitator yang menemani dan menuntun potensi kodrat alam serta zaman murid.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="paradigm-card">
+              <div class="paradigm-card-header">
+                <span class="paradigm-aspect">Pendekatan Perancangan Ajar</span>
+                <span class="badge-editorial lime">METODOLOGI UBD</span>
+              </div>
+              <div class="paradigm-comparison">
+                <div class="paradigm-col before">
+                  <span class="paradigm-col-label">Sebelum PPG</span>
+                  <p>Menyusun skenario aktivitas yang ramai di awal tanpa kejelasan indikator capaian bukti pemahaman murid.</p>
+                </div>
+                <div class="paradigm-col after">
+                  <span class="paradigm-col-label">Sesudah PPG (Paradigma Baru)</span>
+                  <p>Menerapkan Understanding by Design (UbD): menetapkan tujuan esensial, merumuskan bukti asesmen autentik, lalu merancang langkah eksplorasi.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="paradigm-card">
+              <div class="paradigm-card-header">
+                <span class="paradigm-aspect">Memandang Keberagaman Murid</span>
+                <span class="badge-editorial lime">INKLUSIF & DIFERENSIASI</span>
+              </div>
+              <div class="paradigm-comparison">
+                <div class="paradigm-col before">
+                  <span class="paradigm-col-label">Sebelum PPG</span>
+                  <p>Memperlakukan seluruh murid dengan instruksi, kecepatan, dan lembar kerja seragam tanpa mempertimbangkan kesiapan.</p>
+                </div>
+                <div class="paradigm-col after">
+                  <span class="paradigm-col-label">Sesudah PPG (Paradigma Baru)</span>
+                  <p>Menerapkan Pembelajaran Inklusif & Berdiferensiasi. Membuka ragam jalur partisipasi (ekspresi tampil, menulis naskah, tata panggung) secara adil.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="paradigm-card">
+              <div class="paradigm-card-header">
+                <span class="paradigm-aspect">Fungsi & Makna Asesmen</span>
+                <span class="badge-editorial lime">ASESMEN DIAGNOSTIK</span>
+              </div>
+              <div class="paradigm-comparison">
+                <div class="paradigm-col before">
+                  <span class="paradigm-col-label">Sebelum PPG</span>
+                  <p>Asesmen hanya diposisikan sebagai penutup bab untuk memberi label nilai angka kuantitatif pada rapor murid.</p>
+                </div>
+                <div class="paradigm-col after">
+                  <span class="paradigm-col-label">Sesudah PPG (Paradigma Baru)</span>
+                  <p>Asesmen sebagai bagian dari proses belajar. Menempatkan hasil penilaian sebagai petunjuk diagnosis untuk memperbaiki metode mengajar guru.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Evaluasi Diri PPG (Semester 2) -->
+        <div style="margin-bottom: 56px;">
+          <div style="margin-bottom: 24px;">
+            <span class="badge-editorial cobalt">EVALUASI DIRI GURU</span>
+            <h3 style="font-size: var(--text-2xl); margin-top: 8px;">Evaluasi Diri PPG Semester 2</h3>
+            <p style="color: var(--ink-muted); font-size: var(--text-sm);">
+              Refleksi jujur atas capaian kompetensi yang telah berkembang pesat dan area pedagogis yang terus diasah secara berkelanjutan.
+            </p>
+          </div>
+
+          <div id="self-evaluation-container">
+            <div class="self-eval-grid">
+              <div class="eval-card eval-strengths">
+                <div class="eval-card-header">
+                  <span class="badge-editorial lime">PENCAPAIAN DIRI</span>
+                  <h4>✦ Hal yang Sudah Berkembang</h4>
+                </div>
+                <p style="font-size: var(--text-sm); line-height: 1.6; margin-bottom: 14px; color: var(--ink-secondary);">
+                  Selama PPG Semester 2, saya merasa berkembang dalam memahami pembelajaran yang bermakna, asesmen yang selaras dengan tujuan, pembelajaran inklusif, dan perhatian pada kondisi sosial emosional murid. Teknologi dan literasi juga mulai saya lihat sebagai cara memperkaya pengalaman belajar, sementara refleksi membantu saya menilai apakah keputusan mengajar saya tepat. PPL Mandiri menjadi bukti bahwa saya mulai bisa menghubungkan konsep pedagogis dengan masalah nyata di kelas, lalu menyusun tindakan perbaikan dari hasil pengamatan. Rasanya berbeda dibanding semester sebelumnya, karena teori yang saya pelajari terasa nyata setelah saya melihat langsung dampaknya pada murid.
+                </p>
+                <ul class="eval-list">
+                  <li>
+                    <span class="eval-icon">✔</span>
+                    <span>Pemahaman mendalam mengenai pembelajaran bermakna dan asesmen yang selaras dengan tujuan capaian pembelajaran.</span>
+                  </li>
+                  <li>
+                    <span class="eval-icon">✔</span>
+                    <span>Kemampuan menerapkan pembelajaran inklusif yang menghargai keberagaman gaya berekspresi seni peserta didik.</span>
+                  </li>
+                  <li>
+                    <span class="eval-icon">✔</span>
+                    <span>Kepekaan membaca kondisi sosial-emosional murid dan menciptakan ruang kelas yang aman tanpa rasa takut salah.</span>
+                  </li>
+                  <li>
+                    <span class="eval-icon">✔</span>
+                    <span>Pemanfaatan media teknologi dan literasi sebagai jembatan apresiasi budaya tanpa menghilangkan pengalaman praktik langsung.</span>
+                  </li>
+                  <li>
+                    <span class="eval-icon">✔</span>
+                    <span>Keterampilan menghubungkan konsep pedagogis dengan masalah riil kelas melalui riset tindakan berbasis bukti nyata (PTK PPL Mandiri).</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="eval-card eval-growth">
+                <div class="eval-card-header">
+                  <span class="badge-editorial cobalt">TITIK BERANGKAT</span>
+                  <h4>✦ Hal yang Masih Perlu Saya Latih</h4>
+                </div>
+                <p style="font-size: var(--text-sm); line-height: 1.6; margin-bottom: 14px; color: var(--ink-secondary);">
+                  Saya sadar proses menjadi guru profesional butuh latihan terus-menerus. Masih ada yang perlu saya asah: menyesuaikan kegiatan dengan kebutuhan murid, mengatur waktu dan dinamika kelas, serta memberi kesempatan berpartisipasi secara merata. Saya juga ingin lebih rajin memanfaatkan umpan balik dari guru pamong, dosen pembimbing, dan murid untuk memperbaiki cara mengajar. Bagi saya, menyadari kekurangan bukan tanda gagal. Itu justru titik awal untuk menentukan perubahan yang lebih terarah. Tantangannya sekarang adalah menjaga agar kesadaran itu tidak berhenti di kertas, tetapi ikut terbawa ke kelas berikutnya.
+                </p>
+                <ul class="eval-list">
+                  <li>
+                    <span class="eval-icon">✎</span>
+                    <span>Menyesuaikan fleksibilitas alur kegiatan dengan ritme kebutuhan murid yang dinamis di setiap pertemuan.</span>
+                  </li>
+                  <li>
+                    <span class="eval-icon">✎</span>
+                    <span>Manajemen waktu dan pengendalian dinamika kelas agar seluruh fase pembelajaran terlaksana proporsional.</span>
+                  </li>
+                  <li>
+                    <span class="eval-icon">✎</span>
+                    <span>Memberikan kesempatan berpartisipasi secara merata bagi murid yang cenderung pendiam atau lambat beradaptasi.</span>
+                  </li>
+                  <li>
+                    <span class="eval-icon">✎</span>
+                    <span>Konsistensi memanfaatkan umpan balik dari guru pamong, dosen pembimbing, dan murid untuk langsung diterjemahkan ke tindakan kelas berikutnya.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Refleksi Akhir Perjalanan Dua Semester PPG -->
+        <div style="margin-bottom: 56px;">
+          <div id="final-reflection-container">
+            <div class="final-narrative-card">
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap;">
+                <span class="badge-editorial lime">SINTESIS DUA SEMESTER</span>
+                <span class="badge-editorial">FIKO KURNIA PUTRA, S.Sn.</span>
+                <span class="badge-editorial cobalt">SMAN 4 SEMARANG</span>
+              </div>
+              <h3 style="font-size: var(--text-2xl); margin-bottom: 16px;">Refleksi Akhir Saya</h3>
+              <div style="font-size: var(--text-base); line-height: 1.85; color: var(--ink-secondary);">
+                <p style="margin-bottom: 16px;">
+                  Setelah dua semester PPG, saya melihat peran guru dengan lebih utuh: sebagai pendidik, fasilitator, pembimbing, sekaligus orang yang terus belajar. Semester 1 memberi saya dasar tentang karakter murid, filosofi pendidikan, pembelajaran mendalam, teknologi, dan pola pikir bertumbuh. Semester 2 mematangkannya lewat pembelajaran inklusif, sosial emosional, literasi, kesehatan mental, kepemimpinan, dan pengalaman PPL Mandiri.
+                </p>
+                <p style="margin-bottom: 16px;">
+                  Pengalaman yang paling berkesan bagi saya adalah ketika menghadapi masalah nyata di pembelajaran Dasar Teater di SMAN 4 Semarang, lalu mencoba mengatasinya dengan TPS berbantuan media audiovisual. Dari situ saya belajar bahwa guru perlu berani mengubah cara mengajar, memperhatikan respons murid, mengevaluasi hasilnya, dan memperbaiki strategi berdasarkan bukti, bukan perasaan semata.
+                </p>
+                <p style="margin-bottom: 16px;">
+                  Saya tahu masih ada hal yang perlu saya kembangkan, terutama soal mengatur waktu, menyusun asesmen, memeratakan partisipasi, dan menindaklanjuti hasil refleksi. Saya tidak ingin melihat kekurangan itu sebagai beban. Itu bagian dari proses menjadi profesional, dan akan saya hadapi dengan latihan, keterbukaan pada masukan, dan tekad untuk terus belajar.
+                </p>
+                <p style="margin-bottom: 0;">
+                  Sebagai calon guru Seni Budaya berlatar Seni Karawitan, saya ingin pembelajaran yang saya hadirkan tidak hanya menumbuhkan pengetahuan dan keterampilan seni, tetapi juga kepekaan, kreativitas, karakter, kerja sama, dan penghargaan pada keberagaman budaya. Saya ingin menjadi guru yang bisa mempertemukan kekayaan seni dan tradisi dengan kebutuhan pendidikan hari ini lewat cara yang inovatif, inklusif, dan bermakna.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Rencana Tindak Lanjut (RTL) Guru Profesional -->
+        <div style="margin-bottom: 56px;">
+          <div style="margin-bottom: 24px;">
+            <span class="badge-editorial lime">DESAIN PEMBELAJARAN MASA DEPAN</span>
+            <h3 style="font-size: var(--text-2xl); margin-top: 8px;">Komitmen dan Tindak Lanjut</h3>
+            <p style="color: var(--ink-muted); font-size: var(--text-sm);">
+              Ke depan, saya berkomitmen terus meningkatkan kompetensi lewat perencanaan yang matang, pembelajaran yang berpihak pada murid, asesmen yang tepat, dan refleksi yang berkelanjutan.
+            </p>
+          </div>
+
+          <div class="action-plan-grid" id="action-plan-grid">
+            <div class="action-card">
+              <div class="action-card-header">
+                <span class="action-card-num">01</span>
+                <h4 class="action-card-title">Pembelajaran yang Berpihak pada Murid</h4>
+              </div>
+              <p class="action-card-desc">Merancang pembelajaran dengan perencanaan yang matang, memberi kesempatan bagi murid untuk berpikir kritis, berekspresi bebas, bekerja sama, dan berkembang sesuai potensinya.</p>
+            </div>
+
+            <div class="action-card">
+              <div class="action-card-header">
+                <span class="action-card-num">02</span>
+                <h4 class="action-card-title">Inovasi Pembelajaran Seni Budaya Adaptif</h4>
+              </div>
+              <p class="action-card-desc">Mengembangkan inovasi pembelajaran Seni Budaya yang bisa dipakai ulang, disesuaikan dengan karakter kelas, dan dievaluasi dengan bukti yang relevan.</p>
+            </div>
+
+            <div class="action-card">
+              <div class="action-card-header">
+                <span class="action-card-num">03</span>
+                <h4 class="action-card-title">Praktisi Reflektif Berkelanjutan</h4>
+              </div>
+              <p class="action-card-desc">Memastikan apa yang dipelajari dan direnungkan selama PPG tidak berhenti sebagai dokumen akademis, melainkan menjadi pijakan untuk kebiasaan profesional yang terus tumbuh.</p>
+            </div>
+
+            <div class="action-card">
+              <div class="action-card-header">
+                <span class="action-card-num">04</span>
+                <h4 class="action-card-title">Pelestarian Seni Tradisi & Pedagogi Modern</h4>
+              </div>
+              <p class="action-card-desc">Mempertemukan kekayaan seni tradisi Karawitan dengan kebutuhan pendidikan zaman sekarang lewat cara yang inovatif, inklusif, dan bermakna bagi kehidupan murid.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Kalimat Penutup Estetik (Kutipan Khusus Refleksi) -->
+        <div style="margin-bottom: 64px;">
+          <div id="aesthetic-quote-container">
+            <div class="aesthetic-quote-card">
+              <div class="quote-decorative-mark">“</div>
+              <blockquote class="aesthetic-quote-text">
+                “Menjadi guru, bagi saya, bukan soal sempurna sejak hari pertama. Yang terpenting adalah mau terus belajar, merenungkan pengalaman, memperbaiki kekurangan, dan memberi setiap murid kesempatan untuk bertumbuh. Saya ingin menjadi guru Seni Budaya yang kreatif merancang pembelajaran, inklusif dalam menghargai keberagaman, dan reflektif dalam membenahi diri, supaya ilmu, seni, dan budaya yang saya ajarkan sungguh bermakna bagi kehidupan murid.”
+              </blockquote>
+              <div class="aesthetic-quote-meta">
+                <div class="author-info">
+                  <strong class="author-name">Fiko Kurnia Putra, S.Sn.</strong>
+                  <span class="author-title">Calon Pendidik Seni Budaya | PPG Prajabatan Universitas Negeri Semarang (SMAN 4 Semarang)</span>
+                </div>
+                <div class="quote-stamp">
+                  <span>✦ REFLEKSI UTUH PPG ✦</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SUB BAB 4: KARYA & DESAIN INOVASI PEMBELAJARAN
+         ========================================================================== -->
+    <section id="karya-inovasi" class="section section-alt" aria-label="Desain Inovasi Pembelajaran">
+      <!-- Ambient Background Photo Accents (Foto Fiko) -->
+      <div class="section-bg-accent" style="--rot: 5deg; top: 10%; left: 1.5%;" title="Fiko Kurnia Putra"><img src="Fiko----- (2).jpeg" alt="Fiko Kurnia Putra" loading="lazy" /></div>
+      <div class="section-bg-accent" style="--rot: -4deg; bottom: 8%; right: 1.5%;" title="Fiko Kurnia Putra"><img src="Fiko.jpeg" alt="Fiko Kurnia Putra" loading="lazy" /></div>
+
+      <div class="container">
+        <header class="section-header">
+          <div class="section-index">04. Desain Inovasi Pembelajaran</div>
+          <h2 class="section-title">
+            Penerapan Pembelajaran Kooperatif Tipe Think Pair Share (TPS) untuk Meningkatkan Hasil Belajar Materi Dasar Teater pada Murid Kelas X SMAN 4 Semarang Tahun Pelajaran 2026/2027
+          </h2>
+          <p class="section-subtitle">
+            Riset Tindakan Kelas (PTK) teruji sebagai wujud inovasi pedagogis berorientasi pada peserta didik untuk memecahkan masalah pasivitas belajar, melatih kolaborasi, dan melejitkan pemahaman seni peran.
+          </p>
+        </header>
+
+        <!-- PTK Showcase Box: Problem, Implementation, Metric Stats, & Cycles -->
+        <div class="ptk-showcase-box" style="margin-top: 16px;">
+          <div class="ptk-header-badges">
+            <span class="badge-editorial cobalt">DESAIN INOVASI PEMBELAJARAN</span>
+            <span class="badge-editorial lime">RISET TINDAKAN KELAS (PTK)</span>
+            <span class="badge-editorial">SMAN 4 SEMARANG // KELAS X-2</span>
+          </div>
+
+          <h3 class="ptk-title">Pembelajaran Kooperatif Think Pair Share (TPS) Berbantuan Media Audiovisual</h3>
+
+          <p class="ptk-desc">
+            Di kelas X-2 SMAN 4 Semarang, pada materi Dasar Teater, saya mendapati bahwa pembelajaran yang didominasi ceramah dan tanya jawab klasikal belum bisa melibatkan seluruh murid. Karena itu saya mencoba model kooperatif <strong>Think Pair Share (TPS) dengan bantuan media audiovisual</strong>. Murid menonton video pertunjukan, berpikir sendiri, berdiskusi dengan pasangan, lalu menyampaikan hasilnya kepada kelas. Ini pertama kalinya saya mengangkat masalah yang saya lihat sendiri di kelas, lalu mencoba menjawabnya dengan tindakan nyata.
+          </p>
+
+          <!-- Metric Stat Cards -->
+          <div class="ptk-metrics-grid">
+            <div class="ptk-metric-card">
+              <span class="metric-label">Rata-rata Nilai Kelas</span>
+              <div class="metric-val-row">
+                <span class="metric-start">70,60</span>
+                <span class="metric-arrow">➔</span>
+                <span class="metric-mid">84,29</span>
+                <span class="metric-arrow">➔</span>
+                <span class="metric-final">94,60</span>
+              </div>
+              <div class="metric-footer-row">
+                <span class="metric-growth">+24,00 Poin</span>
+                <span class="metric-badge">Peningkatan Signifikan</span>
+              </div>
+            </div>
+
+            <div class="ptk-metric-card">
+              <span class="metric-label">Ketuntasan Belajar</span>
+              <div class="metric-val-row">
+                <span class="metric-start">40,00%</span>
+                <span class="metric-arrow">➔</span>
+                <span class="metric-mid">94,29%</span>
+                <span class="metric-arrow">➔</span>
+                <span class="metric-final">100%</span>
+              </div>
+              <div class="metric-footer-row">
+                <span class="metric-growth">+60,00%</span>
+                <span class="metric-badge">Tuntas Sempurna</span>
+              </div>
+            </div>
+
+            <div class="ptk-metric-card">
+              <span class="metric-label">Keaktifan Klasikal (Aktif & Sangat Aktif)</span>
+              <div class="metric-val-row">
+                <span class="metric-start">14,29%</span>
+                <span class="metric-arrow">➔</span>
+                <span class="metric-mid">82,86%</span>
+                <span class="metric-arrow">➔</span>
+                <span class="metric-final">100%</span>
+              </div>
+              <div class="metric-footer-row">
+                <span class="metric-growth">+85,71%</span>
+                <span class="metric-badge">Partisipasi Total</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Siklus I & II Explanation -->
+          <div class="ptk-cycles-row">
+            <div class="ptk-cycle-card cycle-1">
+              <div class="cycle-tag">SIKLUS I // REFLEKSI AWAL</div>
+              <h4>Kendala yang Ditemukan:</h4>
+              <p>Pada Siklus I, masih ada murid yang belum tuntas, beberapa pasangan belum berdiskusi dengan baik, dan pertanyaan di LKPD perlu dibuat lebih analitis.</p>
+            </div>
+            <div class="ptk-cycle-card cycle-2">
+              <div class="cycle-tag">SIKLUS II // TINDAKAN PERBAIKAN</div>
+              <h4>Solusi Nyata yang Berhasil:</h4>
+              <p>Maka di Siklus II saya memakai contoh visual yang lebih konkret, menyusun pertanyaan yang lebih terarah, menata ulang pasangan secara heterogen, mengatur waktu, dan memperkuat umpan balik dari guru. Perbaikan itu lahir dari apa yang saya lihat di kelas, bukan dari tebakan.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Drive-Style Embedded PDF Viewer for PTK Artefak -->
+        <div class="pdf-drive-container" id="ptk-drive-viewer">
+          <div class="pdf-drive-toolbar">
+            <div class="pdf-drive-meta">
+              <span class="pdf-drive-icon">📑</span>
+              <div class="pdf-drive-filename">
+                <span>PTK Fiko Kurnia Putra.pdf</span>
+                <span class="pdf-drive-badge">ARTEFAK ASLI PTK</span>
+              </div>
+            </div>
+            <div class="pdf-drive-actions">
+              <a href="PTK Fiko Kurnia Putra.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-lime btn-sm">
+                <span>Buka Layar Penuh</span>
+                <span>↗</span>
+              </a>
+              <a href="PTK Fiko Kurnia Putra.pdf" download class="btn btn-outline btn-sm" style="color: #FFFFFF; border-color: rgba(255,255,255,0.4);">
+                <span>Unduh Naskah PDF</span>
+                <span>📥</span>
+              </a>
+            </div>
+          </div>
+
+          <iframe 
+            src="PTK Fiko Kurnia Putra.pdf#toolbar=1&navpanes=1&scrollbar=1" 
+            class="pdf-drive-viewer-frame" 
+            title="Naskah Lengkap Laporan Riset Tindakan Kelas (PTK) Fiko Kurnia Putra">
+            <p>Peramban Anda tidak mendukung penampil PDF langsung. Silakan <a href="PTK Fiko Kurnia Putra.pdf" target="_blank">klik di sini untuk membuka atau mengunduh naskah PTK</a>.</p>
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- 09. TERHUBUNG / CONTACT SECTION -->
+    <section id="contact" class="section" aria-label="Kontak dan Kolaborasi">
+      <!-- Ambient Background Photo Accent (Foto Fiko) -->
+      <div class="section-bg-accent" style="--rot: -5deg; top: 12%; right: 2%;" title="Fiko Kurnia Putra"><img src="Fiko-----.jpeg" alt="Fiko Kurnia Putra" loading="lazy" /></div>
+      <div class="section-bg-accent" style="--rot: 4deg; bottom: 8%; left: 2%;" title="Fiko Kurnia Putra"><img src="Fiko.jpeg" alt="Fiko Kurnia Putra" loading="lazy" /></div>
+
+      <div class="container contact-container">
+        <div>
+          <div class="section-index">09. Terhubung</div>
+          <h2 class="contact-headline">Mari Berdialog & Menciptakan Ruang Belajar yang Menginspirasi.</h2>
+          <p class="contact-desc">
+            Terbuka untuk diskusi desain pembelajaran seni budaya, inovasi kelas teater & musik karawitan, maupun dialog seputar praktik pedagogis di sekolah.
+          </p>
+
+          <!-- Social Channels: Instagram & TikTok Only -->
+          <div class="contact-social-grid">
+            <a href="https://www.instagram.com/fikokurnia_/" target="_blank" rel="noopener noreferrer" class="contact-social-card social-ig" title="Kunjungi Instagram @fikokurnia_">
+              <div class="contact-social-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <div class="contact-social-info">
+                <span class="badge-editorial lime" style="margin-bottom: 4px; display: inline-block;">INSTAGRAM UTAMA</span>
+                <h4>Instagram</h4>
+                <span class="handle">@fikokurnia_ ↗</span>
+                <span class="sub">Klik untuk melihat profil & portofolio harian</span>
+              </div>
+            </a>
+
+            <a href="https://www.tiktok.com/@fikokurnia7" target="_blank" rel="noopener noreferrer" class="contact-social-card social-tiktok" title="Kunjungi TikTok @FikoKP">
+              <div class="contact-social-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.12V9.36a6.34 6.34 0 0 0-.86-.06A6.34 6.34 0 0 0 3 15.64a6.34 6.34 0 0 0 8.79 5.86 6.3 6.3 0 0 0 3.9-5.86V8.71a8.28 8.28 0 0 0 4.9 1.57V6.83a4.83 4.83 0 0 1-1-.14z"/>
+                </svg>
+              </div>
+              <div class="contact-social-info">
+                <span class="badge-editorial cobalt" style="margin-bottom: 4px; display: inline-block;">TIKTOK KREASI</span>
+                <h4>TikTok</h4>
+                <span class="handle">@FikoKP ↗</span>
+                <span class="sub">Klik untuk terhubung di TikTok @fikokurnia7</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Direct Message Instagram Box -->
+        <div class="contact-dm-box">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
+            <span class="badge-editorial lime">PESAN LANGSUNG</span>
+            <span class="badge-editorial cobalt">INSTAGRAM DM</span>
+          </div>
+          <h3 style="font-size: var(--text-2xl); margin-bottom: 8px;">Kirim Pesan ke Instagram DM</h3>
+          <p style="font-size: var(--text-sm); color: var(--ink-secondary); margin-bottom: 20px; line-height: 1.6;">
+            Ingin terhubung, berdiskusi, atau berkolaborasi? Anda dapat menulis pesan atau pertanyaan di bawah ini lalu tekan tombol untuk langsung masuk ke <strong>Direct Message Instagram @fikokurnia_</strong>.
+          </p>
+
+          <form id="dm-instagram-form" onsubmit="event.preventDefault(); window.open('https://ig.me/m/fikokurnia_', '_blank');">
+            <div class="form-group" style="margin-bottom: 16px;">
+              <label for="dm-topic" class="form-label">Topik Diskusi / Kolaborasi</label>
+              <input type="text" id="dm-topic" class="form-input" placeholder="Contoh: Desain Pembelajaran Dasar Teater / Seni Karawitan..." />
+            </div>
+
+            <div class="form-group" style="margin-bottom: 20px;">
+              <label for="dm-text" class="form-label">Pesan Anda</label>
+              <textarea id="dm-text" class="form-textarea" placeholder="Tuliskan gagasan atau pertanyaan Anda di sini..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px;">
+              <span>Buka Direct Message Instagram (@fikokurnia_)</span>
+              <span>💬</span>
+            </button>
+            <p style="font-size: 11px; color: var(--ink-muted); text-align: center; margin-top: 10px; margin-bottom: 0;">
+              *Akan membuka halaman Direct Message resmi akun Instagram @fikokurnia_
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTITUTIONAL & ACCREDITATION PARTNER LOGOS RIBBON (BOTTOM) -->
+    <div class="academic-logos-strip academic-logos-strip-bottom" aria-label="Afiliasi dan Mitra Institusi Bagian Bawah">
+      <div class="container">
+        <div class="academic-logos-label">
+          <span>✦ PENDIDIKAN PROFESI GURU • KEMENDIKBUDRISTEK • UNIVERSITAS NEGERI SEMARANG • SEKOLAH RAMAH ANAK ✦</span>
+        </div>
+        <div class="academic-logos-row">
+          <div class="academic-logo-item logo-dark-box" title="Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi">
+            <img src="tut-wuri-handayani-logo-with-white-text-png-b461.png" alt="Tut Wuri Handayani - Kemendikbudristek" loading="lazy" />
+          </div>
+          <div class="academic-logo-item" title="PPG Calon Guru">
+            <img src="Logo PPG Calon Guru.png" alt="Logo PPG Calon Guru" loading="lazy" />
+          </div>
+          <div class="academic-logo-item" title="Universitas Negeri Semarang">
+            <img src="logo-unnes-horizontal.png" alt="Universitas Negeri Semarang (UNNES)" loading="lazy" />
+          </div>
+          <div class="academic-logo-item" title="Penjaminan Mutu Pendidikan">
+            <img src="LOGO-BERMUTU.png" alt="Logo Bermutu" loading="lazy" />
+          </div>
+          <div class="academic-logo-item" title="Sekolah Ramah Anak">
+            <img src="ramah.png" alt="Sekolah Ramah Anak" loading="lazy" />
+          </div>
+          <div class="academic-logo-item" title="Lambang UNNES">
+            <img src="logo.png" alt="UNNES Emblem" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>FIKO KURNIA PUTRA</h4>
+          <p>
+            E-Portofolio Calon Pendidik Seni • Program Studi Pendidikan Seni Budaya PPG Prajabatan Universitas Negeri Semarang. Menghidupkan seni dalam pembelajaran, menumbuhkan potensi dalam setiap murid.
+          </p>
+        </div>
+
+        <div class="footer-meta-block">
+          <span>LOKASI: <strong>KEDIRI & SEMARANG, INDONESIA</strong></span>
+          <span>WAKTU LOKAL: <strong id="live-clock">--:--:-- WIB</strong></span>
+          <span>EDISI: <strong>2026 // PPG PENDIDIKAN SENI BUDAYA UNNES</strong></span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Fiko Kurnia Putra, S.Sn. Hak cipta dilindungi. Terbuka untuk tujuan edukasi & inspirasi pedagogis.
+        </div>
+        <div>
+          <span>KODE DIBANGUN DENGAN: HTML5 • VANILLA CSS • MODERN ES6</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS & DIALOGS
+       ========================================================================== -->
+  <!-- Course Reflection Modal (4C Framework) -->
+  <div id="course-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Detail Refleksi Mata Kuliah 4C">
+    <div class="modal-dialog" style="max-width: 860px;">
+      <div class="modal-header">
+        <div style="font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 700; color: var(--accent-cobalt);">
+          // REFLEKSI MATA KULIAH PPG // 4C FRAMEWORK & ARTEFAK
+        </div>
+        <button id="course-modal-close" class="modal-close-btn" aria-label="Tutup Dialog">✕</button>
+      </div>
+      <div id="course-modal-body" class="modal-body">
+        <!-- Injected via courses.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Detail Modal -->
+  <div id="project-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Detail Proyek">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div style="font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 700; color: var(--accent-cobalt);">
+          // PROYEK DETAIL
+        </div>
+        <button id="project-modal-close" class="modal-close-btn" aria-label="Tutup Dialog">✕</button>
+      </div>
+      <div id="project-modal-body" class="modal-body">
+        <!-- Injected via projects.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Reflection Detail Modal -->
+  <div id="reflection-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Detail Jurnal Refleksi">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div style="font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 700; color: var(--accent-cobalt);">
+          // JURNAL REFLEKSI DETAIL
+        </div>
+        <button id="reflection-modal-close" class="modal-close-btn" aria-label="Tutup Dialog">✕</button>
+      </div>
+      <div id="reflection-modal-body" class="modal-body">
+        <!-- Injected via reflections.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Document Preview Modal -->
+  <div id="doc-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Detail Dokumen">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div style="font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 700; color: var(--accent-cobalt);">
+          // ARSIP DOKUMEN PREVIEW
+        </div>
+        <button id="doc-modal-close" class="modal-close-btn" aria-label="Tutup Dialog">✕</button>
+      </div>
+      <div id="doc-modal-body" class="modal-body">
+        <!-- Injected via documents.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Back To Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Kembali ke atas halaman" title="Kembali ke atas">
+    ↑
+  </button>
+
+  <script src="js/audio-player.js"></script>
+  <script src="js/course-filter.js"></script>
+  <!-- Main JavaScript Bundle -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+/* ==========================================================================
+   THE CREATIVE EDUCATOR ARCHIVE - RESPONSIVE STYLES
+   ========================================================================== */
+
+/* Tablet & Mobile Screens (<= 1024px) */
+@media (max-width: 1024px) {
+  :root {
+    --nav-height: 64px;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .mobile-drawer {
+    display: flex;
+  }
+
+  .hero-grid,
+  .hero-home-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-visual,
+  .hero-home-photo-col {
+    order: -1;
+  }
+
+  .hero-portrait-frame,
+  .foreground-photo-card {
+    max-width: 380px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .project-card.featured-span,
+  .project-card.standard-span,
+  .project-card.half-span {
+    grid-column: span 12;
+  }
+}
+
+/* Tablet Screens (<= 768px) */
+@media (max-width: 768px) {
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .section-header {
+    margin-bottom: 36px;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-headline {
+    font-size: 2.5rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .about-facts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-project-header,
+  .case-study-body {
+    padding: 24px;
+  }
+
+  .philosophy-quote-box {
+    padding: 28px;
+  }
+
+  .quote-mark {
+    font-size: 54px;
+    top: 10px;
+    left: 14px;
+  }
+
+  .quote-text {
+    font-size: 1.35rem;
+  }
+
+  .contact-form-box {
+    padding: 24px;
+  }
+
+  .modal-dialog {
+    max-height: 94vh;
+  }
+
+  .modal-body {
+    padding: 20px;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .back-to-top {
+    bottom: 20px;
+    left: 20px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .toast-container {
+    bottom: 20px;
+    right: 20px;
+    left: 20px;
+  }
+
+  .toast {
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+/* Small Mobile Screens (<= 480px) */
+@media (max-width: 480px) {
+  .container,
+  .container-narrow {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-portrait-frame,
+  .foreground-photo-card {
+    max-width: 100%;
+  }
+
+  .home-nav-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kalcer-sticker {
+    transform: scale(0.8);
+  }
+
+  .hero-meta-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .timeline {
+    padding-left: 24px;
+  }
+
+  .timeline-node {
+    left: -24px;
+    width: 14px;
+    height: 14px;
+  }
+
+  .timeline-card {
+    padding: 16px;
+  }
+
+  .btn {
+    padding: 10px 16px;
+    font-size: 0.8125rem;
+  }
+}
